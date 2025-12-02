@@ -7,7 +7,7 @@ function MovieCard({ movie }: { movie: Movie }) {
   return (
     <div
       key={movie.id}
-      className="flex flex-col gap-3 border rounded-2xl overflow-hidden shadow-lg bg-gradient-to-b from-[#f0f0f5] to-[#dcdce0]"
+      className="flex flex-col gap-3 border rounded-2xl overflow-hidden shadow-lg  from-[#f0f0f5] to-[#dcdce0]"
     >
       <div className="h-[395px] relative group">
         <img
@@ -24,7 +24,7 @@ function MovieCard({ movie }: { movie: Movie }) {
         </div>
       </div>
 
-      {/* زرار متصل بالكارد */}
+      
       <Link
         to={`/movie/${movie.id}`}
         className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-b-2xl text-center transition"
