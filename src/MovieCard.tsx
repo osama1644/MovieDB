@@ -5,8 +5,10 @@ const url = `https://image.tmdb.org/t/p/w500`;
 
 function MovieCard({ movie }: { movie: Movie }) {
   return (
-    <div key={movie.id} className="flex flex-col gap-3">
-     
+    <div
+      key={movie.id}
+      className="flex flex-col gap-3 border rounded-2xl overflow-hidden shadow-lg bg-gradient-to-b from-[#f0f0f5] to-[#dcdce0]"
+    >
       <div className="h-[395px] relative group">
         <img
           src={`${url}/${movie.poster_path}`}
@@ -19,16 +21,16 @@ function MovieCard({ movie }: { movie: Movie }) {
           <p className="text-lg md:text-xl">تاريخ الإصدار: {movie.release_date}</p>
           <p className="text-lg md:text-xl">عدد المقيمين: {movie.vote_count}</p>
           <p className="text-lg md:text-xl">التقييم: {movie.vote_average}</p>
-
-          
-          <Link
-            to={`/movie/${movie.id}`}
-            className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-xl text-center transition"
-          >
-            عرض التفاصيل
-          </Link>
         </div>
       </div>
+
+      {/* زرار متصل بالكارد */}
+      <Link
+        to={`/movie/${movie.id}`}
+        className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-b-2xl text-center transition"
+      >
+        عرض التفاصيل
+      </Link>
     </div>
   );
 }
