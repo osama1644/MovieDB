@@ -6,7 +6,7 @@ function Movies() {
   return (
     <div>
       {movies.length > 0 ? (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 px-20 bg-[#1E1E1E] py-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 px-5gi md:px-20 bg-[#1E1E1E] py-4">
           {movies.map((movie) => (
             <MovieCard movie={movie} key={movie.id} />
           ))}
